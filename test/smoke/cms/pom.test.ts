@@ -16,7 +16,7 @@ test.describe("POM - TC001", () => {
         const toaster = await commonPage.toaster();
         expect(await toaster?.textContent()).toContain("Welcome");
         await page.reload();
-        await headerPage.clickSignOutLink();
+        await headerPage.clickSignOutLink()
     });
     test.only("Login again", async ({ headerPage, page, loginPage }) => {
         await page.goto("https://letcode.in/")
