@@ -1,12 +1,13 @@
-name: Playwright Tests
+name: workflow_02
 on:
-  push:
-    branches: '**'
+  [repository_dispatch]
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
+    - run: echo "Triggering Wokflow 2"
+    - name: Checkout
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
